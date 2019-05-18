@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 RSpec.describe NASA::Configuration do
+  before do
+    configure
+  end
+
   let(:api_key) { NASA.api_key }
   let(:debug) { NASA.debug }
 
