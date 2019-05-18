@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     NASA (0.1.0)
-      dotenv (~> 2.7.2)
       rest-client (~> 2.0.2)
       sqlite3 (~> 1.4.1)
 
@@ -128,6 +127,7 @@ DEPENDENCIES
   bundler (~> 1.17)
   byebug (~> 11.0.1)
   coveralls (~> 0.8.23)
+  dotenv (~> 2.7.2)
   pry (~> 0.11.3)
   rake (~> 10.0)
   rspec (~> 3.0)
