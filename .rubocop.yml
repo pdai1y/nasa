@@ -1,0 +1,40 @@
+require: rubocop-rspec
+
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'nasa.gemspec'
+    - 'Rakefile'
+    - 'Gemfile'
+  RSpec:
+    Patterns:
+    - '.+'
+  TargetRubyVersion: 2.5.3
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/BlockDelimiters:
+  Exclude:
+    - 'spec/**/*'
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'spec/**/*'
+
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: compact
+  EnforcedStyleForEmptyBraces: no_space
+
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+
+RSpec/FilePath:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 2
