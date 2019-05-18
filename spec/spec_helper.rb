@@ -1,9 +1,7 @@
 require 'bundler/setup'
 require 'dotenv/load'
-require 'simplecov'
-SimpleCov.start do
-  add_filter 'spec'
-end
+require 'coveralls'
+Coveralls.wear!
 
 require 'nasa'
 require_relative 'nasa_helper'

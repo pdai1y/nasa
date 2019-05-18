@@ -1,3 +1,5 @@
+[!travis-ci](https://travis-ci.org/pdai1y/nasa.svg?branch=master)
+
 # Nasa
 
 Ruby Wrapper for the various NASA API Services.
