@@ -1,6 +1,6 @@
-![travis-ci](https://travis-ci.org/pdai1y/nasa.svg?branch=master)
-
 # Nasa
+
+[![travis-ci](https://travis-ci.org/pdai1y/nasa.svg?branch=master)](https://travis-ci.org/pdai1y/nasa) [![Coverage Status](https://coveralls.io/repos/github/pdai1y/nasa/badge.svg?branch=master)](https://coveralls.io/github/pdai1y/nasa?branch=master)
 
 Ruby Wrapper for the various NASA API Services.
 
