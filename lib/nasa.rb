@@ -8,6 +8,7 @@ require 'nasa/version'
 require 'nasa/configuration'
 require 'nasa/api/rest'
 require 'nasa/api/responses'
+require 'nasa/api/services/neo_ws'
 
 # Main entry to the gem
 module NASA
