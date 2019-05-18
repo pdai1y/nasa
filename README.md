@@ -1,4 +1,4 @@
-[!travis-ci](https://travis-ci.org/pdai1y/nasa.svg?branch=master)
+![travis-ci](https://travis-ci.org/pdai1y/nasa.svg?branch=master)
 
 # Nasa
 
