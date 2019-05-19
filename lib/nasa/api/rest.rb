@@ -1,11 +1,10 @@
 # frozen_string_literal: true
+
 require 'nasa/api/responses'
 
 module NASA
   # CRUD Rest actions to be plug and play into all API Services
   module Rest
-    extend NASA::Responses
-
     # @!macro crud
     #   @param [String] url the url to send a request to
     #   @param [Hash] payload the JSON payload to send
@@ -33,9 +32,9 @@ module NASA
       options = rest_options(action, url, payload, params)
       response = RestClient::Request.execute(options)
 
-      Responses::RestResponse.new(response)
+      NASA::RestResponse.new(response)
     rescue RestClient::ExceptionWithResponse => ex
-      Responses::ExceptionResponse.new(ex)
+      NASA::ExceptionResponse.new(ex)
     end
 
     private
