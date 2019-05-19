@@ -33,18 +33,16 @@ module NASA
 
       # @param [RestClient::Response]
       # @return nothing, used by #super in decendants
-      def parse_response(response)
+      def parse_response(_response)
         raise NotImplementedError
       end
 
       private
 
       def json_parse(body)
-        begin
-          ::JSON.parse(body, symbolize_names: true)
-        rescue ::JSON::ParserError
-          {}
-        end
+        ::JSON.parse(body, symbolize_names: true)
+      rescue ::JSON::ParserError
+        {}
       end
     end
 
@@ -61,7 +59,7 @@ module NASA
         @code = response.code
         @body = json_parse(response.body)
         @headers = response.headers
-        @remaining_requests = @headers[:'X-RateLimit-Remaining']
+        @remaining_requests = @headers[:x_ratelimit_remaining]
       end
     end
 
