@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module NASA
-  module Response
+  module Responses
     # Base Response
     class BaseResponse
       # @!attribute [r] code
@@ -36,6 +36,16 @@ module NASA
       def parse_response(response)
         raise NotImplementedError
       end
+
+      private
+
+      def json_parse(body)
+        begin
+          ::JSON.parse(body, symbolize_names: true)
+        rescue ::JSON::ParserError
+          {}
+        end
+      end
     end
 
     # Handles and parses non error responses from the API
@@ -49,11 +59,7 @@ module NASA
       # @param [RestClient::Response] response
       def parse_response(response)
         @code = response.code
-        begin
-          @body = JSON.parse(response.body, symbolize_names: true)
-        rescue JSON::ParserError
-          @body = {}
-        end
+        @body = json_parse(response.body)
         @headers = response.headers
         @remaining_requests = @headers[:'X-RateLimit-Remaining']
       end
@@ -71,12 +77,8 @@ module NASA
       # @return [Hash] Parsed JSON body from response
       def parse_response(response)
         @code = response.http_code
-        begin
-          @body = JSON.parse(response.http_body, symbolize_names: true)
-        rescue JSON::ParserError
-          @body = {}
-        end
-        @message = @body[:message]
+        @body = json_parse(response.http_body)
+        @message = @body.dig(:error, :message)
         @headers = response.http_headers
       end
     end
