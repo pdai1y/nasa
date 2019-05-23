@@ -22,6 +22,9 @@ Style/FrozenStringLiteralComment:
   Exclude:
     - 'spec/**/*'
 
+Metrics/LineLength:
+  Max: 95
+
 Naming/VariableNumber:
   EnforcedStyle: snake_case
 
