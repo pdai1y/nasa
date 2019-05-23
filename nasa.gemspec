@@ -47,6 +47,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'vcr', '~> 4.0.0'
   spec.add_development_dependency 'webmock', '~> 3.5.1'
 
+  spec.add_runtime_dependency 'mongoid', '~> 6.1.0'
   spec.add_runtime_dependency 'rest-client', '~> 2.0.2'
-  spec.add_runtime_dependency 'sqlite3', '~> 1.4.1'
+  spec.add_runtime_dependency 'zeitwerk', '~> 2.1.6'
 end

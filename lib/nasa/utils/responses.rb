@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-module NASA
+require 'json'
+
+module Responses
   # Base Response
   class BaseResponse
     # @!attribute [r] code
@@ -30,8 +32,8 @@ module NASA
       @body[key]
     end
 
-    # @param [RestClient::Response]
-    # @return nothing, used by #super in decendants
+    # @param [RestClient::Response] _response
+    # @raise [NotImplementedError] used by #super in decendants
     def parse_response(_response)
       raise NotImplementedError
     end
@@ -79,4 +81,5 @@ module NASA
       @headers = response.http_headers
     end
   end
+
 end
