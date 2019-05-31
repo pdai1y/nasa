@@ -10,6 +10,3 @@
 .byebug_history
 # rspec failure tracking
 .rspec_status
-
-# MongoDB settings
-mongoid.yml
