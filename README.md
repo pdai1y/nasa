@@ -23,7 +23,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You can check the documentation [here](https://pdai1y.github.io/nasa)
 
 ## Development
 
