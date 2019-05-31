@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe 'NASA Responses' do
+RSpec.describe Responses do
   before do
     configure
   end

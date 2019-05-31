@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe NASA::Configuration do
+RSpec.describe Configuration do
   before do
     configure
   end

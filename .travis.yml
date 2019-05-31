@@ -5,3 +5,18 @@ cache: bundler
 rvm:
   - 2.5.3
 before_install: gem install bundler -v 1.17.3
+
+install:
+  - bundle install
+
+script:
+  - bundle exec yard -r README.md
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  local_dir: ./doc
+  on:
+    branch: master

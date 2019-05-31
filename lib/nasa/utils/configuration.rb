@@ -2,6 +2,8 @@
 
 # Base configuration for the gem
 module Configuration
+  attr_writer :api_key, :debug
+
   # Configures the gem
   #
   # @yield [config]

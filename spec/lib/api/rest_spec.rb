@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe NASA::Rest do
+RSpec.describe Rest do
   before do
     configure
   end
